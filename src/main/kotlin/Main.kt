@@ -1,8 +1,13 @@
 fun main() {
-        val human = Human("Sheila", 20, 62)
-        human.eat(2)
+        var human = Human("Sheila", 20, 62)
+//        human.eat(2)
+    println(human.eat(2))
         human.speak("Hello, I am ${human.name}")
-        human.birthday()
+    human.birthday(4)
+        human.age
+    println(human.age)
+//        println(human.age)
+
     var user = User("Lekishon","Sheila","lekishonsheila@gmail.com","+254-706119709",
         "324536")
     println(user.firstName)
@@ -15,14 +20,16 @@ class Human(var name: String, var age: Int, var weight: Int) {
     fun eat(foodWeight: Int) {
         println("I am eating $foodWeight kgs of food")
         weight += foodWeight
+        println(weight)
     }
 
     fun speak(speech: String) {
         println(speech)
     }
 
-    fun birthday() {
-        age+1
+    fun birthday(age1: Int) {
+        age +=4
+
     }
 
 }
